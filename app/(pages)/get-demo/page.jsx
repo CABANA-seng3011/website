@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { Box, TextField, Button, MenuItem, Typography, Checkbox, ListItemText, Select, InputLabel, FormControl } from '@mui/material';
 import DataDisplay from '../../../components/DataDisplay';
 import Panel from '../../../components/Panel';
-import Header from '../../../components/Header';
-
 
 export default function getRouteDemo() {
   const [category, setCategory] = useState('environmental_risk');
