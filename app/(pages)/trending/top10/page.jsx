@@ -1,11 +1,9 @@
+import TitlePanel from "@/components/TitlePanel";
+import { Box } from "@mui/material";
 // export default function Nasdaq100Page() {
 //   const [data, setData] = useState({});
 //   const [loading, setLoading] = useState(true);
 //   const [error, setError] = useState('');
-
-import TitlePanel from "@/components/TitlePanel";
-import { Box } from "@mui/material";
-
 //   useEffect(() => {
 //     fetchNasdaq100()
 //       .then((groupedData) => {
