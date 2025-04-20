@@ -5,7 +5,7 @@ export default function TitlePanel({ text }) {
     <Box className='silver-bg' top={0}>
       <Typography
         level='h1'
-        py={5}
+        py={10}
         sx={{
           pt: '120px',
           textAlign: 'center',

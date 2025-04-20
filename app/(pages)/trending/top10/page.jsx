@@ -3,6 +3,9 @@
 //   const [loading, setLoading] = useState(true);
 //   const [error, setError] = useState('');
 
+import TitlePanel from "@/components/TitlePanel";
+import { Box } from "@mui/material";
+
 //   useEffect(() => {
 //     fetchNasdaq100()
 //       .then((groupedData) => {
@@ -24,3 +27,11 @@
 //     </div>
 //   );
 // }
+
+export default function () {
+  return (
+    <Box>
+      <TitlePanel text='TOP 10 NASDAQ-100' />
+    </Box>
+  )
+}
