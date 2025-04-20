@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <Panel text="ESG Data Hub" />
+      <Panel text="ESG Data Hub" imagePath='/earth.webp' imageAlt='Earth' />
       
       <div style={{ display: 'flex', justifyContent: 'center', margin: '30px' }}>
         <div style={{ width: '60%' }}>
