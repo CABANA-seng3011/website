@@ -25,9 +25,9 @@ export default function TrendingPage() {
           <GreenBox text='NASDAQ-100' width='100%' height={170} href='/trending/top10' />
         </Box>
         <Stack py={5} direction='row' justifyContent='space-between' >
-          <GreenBox text='Environmental' width={300} height={170} href='/trending/top10' />
-          <GreenBox text='Social' width={300} height={170} href='/trending/top10' />
-          <GreenBox text='Governance' width={300} height={170} href='/trending/top10' />
+          <GreenBox text='Environmental' width={300} height={170} href='/trending/top10env' />
+          <GreenBox text='Social' width={300} height={170} href='/trending/top10social' />
+          <GreenBox text='Governance' width={300} height={170} href='/trending/top10gov' />
         </Stack>
       </Box>
     </Box>

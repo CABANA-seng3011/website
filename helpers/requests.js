@@ -24,5 +24,12 @@ export async function fetchNasdaq100Category(category) {
   const json = await res.json();
   const data = JSON.parse(json);
   
-  return data.events;
+  const filtered = data.events.filter(event => event.category === category);
+
+  const sorted = filtered.sort((a, b) => b.score - a.score);
+
+  const top10 = sorted.slice(0, 10);
+  console.log(top10.map(({ company_name, score }) => ({ company_name, score })))
+
+  return top10.map(({ company_name, score }) => ({ company_name, score }));
 }
