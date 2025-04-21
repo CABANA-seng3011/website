@@ -3,7 +3,6 @@
 import { Container, Typography, Stack } from '@mui/material';
 import FlipCard from '../../../components/FlipCard';
 import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
 import Panel from '../../../components/Panel';
 import { esgDesc1, esgDesc2 } from '../../../public/data';
 
@@ -52,7 +51,6 @@ export default function ESGPage() {
           <FlipCard imagePath='/govern.png' imageAlt='Graphic of people and a cog'  cardTitle='Governance' description={govDesc} />
         </Stack>
       </Container>
-      <Footer/>
     </>
   );
 }
