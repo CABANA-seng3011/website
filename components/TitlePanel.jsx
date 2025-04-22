@@ -2,7 +2,7 @@ import { Box, Container, Typography, Stack } from '@mui/joy'
 
 export default function TitlePanel({ title, body }) {
   return (
-    <Box className='silver-bg' top={0} mb={5}>
+    <Box className='silver-bg' top={0} pb={2}>
       <Container>
         <Stack spacing={3} direction='column' textAlign='center' pb={5}>
           <Typography

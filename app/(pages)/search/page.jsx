@@ -64,35 +64,39 @@ export default function SearchPage() {
   };
 
   return (
-    <Box>
-      <TitlePanel text="Looking for a specific organisation?">
-        <Autocomplete
-          freeSolo
-          options={comp_constants}
-          getOptionLabel={(option) => option.name}
-          onInputChange={(event, value) => setSearchValue(value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') handleSearch(searchValue);
-          }}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              placeholder="Search organisations..."
-              variant="outlined"
-              sx={{ width: '500px' }}
-              InputProps={{
-                ...params.InputProps,
-                sx: { borderRadius: '5px', backgroundColor: '#fff' },
-                endAdornment: (
-                  <InputAdornment position="end" onClick={() => handleSearch(searchValue)}>
-                    <SearchIcon sx={{ color: '#81C784', cursor: 'pointer' }} />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          )}
-        />
-      </TitlePanel>
+    <Box py={5}>
+      <TitlePanel title='Looking for a specific organisation?' />
+        <Box className='silver-bg' pb={7} display='flex' justifyContent='center'>
+          <Autocomplete
+            className='white-bg'
+            mt={3}
+            freeSolo
+            options={comp_constants}
+            getOptionLabel={(option) => option.name}
+            onInputChange={(event, value) => setSearchValue(value)} // update search value as user types
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') handleSearch(searchValue);
+            }}
+            onBlur={() => handleSearch(searchValue)} // trigger search when input loses focus
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                placeholder='Search organisations...'
+                variant='outlined'
+                sx={{ width: '50vw', borderRadius: '5px' }}
+                slotProps={{
+                  ...params.InputProps,
+                  sx: { borderRadius: '5px', backgroundColor: '#fff' },
+                  endAdornment: (
+                    <InputAdornment position='end' onClick={() => handleSearch(searchValue)}>
+                      <SearchIcon sx={{ color: '#81C784', cursor: 'pointer' }} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            )}
+          />
+        </Box>
       <Description />
       <Box mt={5} mx={30} sx={{ padding: '20px', borderRadius: '8px' }}>
         <TableContainer component={Paper}>
