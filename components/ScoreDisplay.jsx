@@ -64,26 +64,22 @@ function ScoreTable({ title, data }) {
           </TableHead>
           <TableBody>
             {data.map((row, idx) => (
-              <Link
+              <TableRow
                 key={idx}
-                href={`/company/${encodeURIComponent(row.company_name)}`}
-                style={{ textDecoration: 'none', color: 'inherit' }}
+                hover
+                sx={{
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: '#f0f0f0',
+                  },
+                }}
+                onClick={() => router.push(`/company/${encodeURIComponent(row.company_name)}`)}
               >
-                <TableRow
-                  hover
-                  sx={{
-                    cursor: 'pointer',
-                    '&:hover': {
-                      backgroundColor: '#f0f0f0',
-                    },
-                  }}
-                >
-                  <TableCell>{row.company_name}</TableCell>
-                  <TableCell sx={{ width: '200px' }}>
-                    <ScoreMeter score={row.score} />
-                  </TableCell>
-                </TableRow>
-            </Link>
+                <TableCell>{row.company_name}</TableCell>
+                <TableCell sx={{ width: '200px' }}>
+                  <ScoreMeter score={row.score} />
+                </TableCell>
+              </TableRow>
             ))}
           </TableBody>
         </Table>
