@@ -1,21 +1,28 @@
-import { Box, Typography } from '@mui/joy';
+import { Box, Container, Typography, Stack } from '@mui/joy'
 
-export default function TitlePanel({ text, children }) {
+export default function TitlePanel({ title, body }) {
   return (
-    <Box className='silver-bg' top={0} sx={{ pt: '120px', pb: '60px' }}>
-      <Typography
-        level='h1'
-        sx={{
-          textAlign: 'center',
-          fontSize: '2.5rem',
-          mb: 4
-        }}
-      >
-        {text}
-      </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: '60px' }}>
-        {children}
-      </Box>
+    <Box className='silver-bg' top={0} mb={5}>
+      <Container>
+        <Stack spacing={3} direction='column' textAlign='center' pb={5}>
+          <Typography
+            level='h1'
+            pt={10}
+            sx={{
+              pt: '120px',
+              textAlign: 'center',
+              fontSize: '2.5rem'
+            }}
+          >
+            {title}
+          </Typography>
+          <Typography
+              level='body'
+            >
+              {body}
+            </Typography>
+        </Stack>
+      </Container>
     </Box>
   );
 }
