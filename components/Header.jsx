@@ -17,6 +17,7 @@ function SubMenu({ subData }) {
     <Menu
       variant='plain'
       placement='bottom-start'
+      className='silver-bg'
       sx={{
         borderRadius: '0px 10px 10px 10px', 
         border: '0px'
@@ -148,7 +149,9 @@ export default function Header() {
   }, []);
 
   return (
-    <Sheet sx={{
+    <Sheet 
+    className='silver-bg'
+    sx={{
       height: 80,
       display: { xs: 'none', lg: 'flex' },
       transition: 'top 0.3s',
