@@ -21,7 +21,7 @@ export default function FlipCard({cardTitle, imagePath, imageAlt, description}) 
     position: 'relative',
     width: '100%',
     height: '100%',
-    transition: 'transform 0.8s',
+    transition: 'transform 1.2s',
     transformStyle: 'preserve-3d',
     transform: isFlipped ? 'rotateY(180deg)' : 'none',
   };
