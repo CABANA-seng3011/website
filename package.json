@@ -14,9 +14,9 @@
     "@mui/icons-material": "^7.0.1",
     "@mui/joy": "^5.0.0-beta.51",
     "@mui/material": "^6.4.7",
-    "next": "15.2.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwind": "^4.0.0"
   },
   "devDependencies": {
