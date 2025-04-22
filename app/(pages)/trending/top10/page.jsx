@@ -1,35 +1,34 @@
-import TitlePanel from "@/components/TitlePanel";
-import { Box } from "@mui/material";
-// export default function Nasdaq100Page() {
-//   const [data, setData] = useState({});
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState('');
-//   useEffect(() => {
-//     fetchNasdaq100()
-//       .then((groupedData) => {
-//         setData(groupedData);
-//         setLoading(false);
-//       })
-//       .catch((err) => {
-//         setError(err.message || 'Unknown error');
-//         setLoading(false);
-//       });
-//   }, []);
+'use client';
 
-//   if (loading) return <p className="p-4">Loading...</p>;
-//   if (error) return <p className="p-4 text-red-500">Error: {error}</p>;
+import React from 'react';
+import { Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import ScoreTableBody from '@/components/ScoreTableBody';
+import { top10Nasdaq } from '@/app/data';
+import { Box, Container } from '@mui/joy';
+import TitlePanel from '@/components/TitlePanel';
 
-//   return (
-//     <div className="p-6">
-//       <DataDisplay data={data} />
-//     </div>
-//   );
-// }
+const bodyText = 'This list provides a ranked TOP 10 view of Nasdaq-100 companies based on their overall ESG score. The scores are calculated by averaging the scores from the three main categories: Environmental, Social, and Governance. Each pillar has been calculated by averaging the scores from the respective opportunity and risk categories.';
 
 export default function () {
   return (
-    <Box>
-      <TitlePanel text='TOP 10 NASDAQ-100' />
+    <Box py={5}>
+      <TitlePanel title='TOP 10 Nasdaq-100' body={bodyText}/>
+      <Container>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell><strong>Company</strong></TableCell>
+                <TableCell><strong>Average ESG Score</strong></TableCell>
+                <TableCell><strong>Social</strong></TableCell>
+                <TableCell><strong>Environmental</strong></TableCell>
+                <TableCell><strong>Governance</strong></TableCell>
+              </TableRow>
+            </TableHead>
+            <ScoreTableBody data={top10Nasdaq} scoreFields={['average_score', 'social', 'environmental', 'governance']} />
+          </Table>
+        </TableContainer>
+      </Container>
     </Box>
-  )
+  );
 }

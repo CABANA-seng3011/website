@@ -4,8 +4,8 @@ import TitlePanel from "@/components/TitlePanel";
 import { fetchNasdaq100Category } from "@/helpers/requests";
 import { Box, Container } from "@mui/joy";
 import { useState, useEffect } from "react";
-import { socialOpp10, socialRisk10 } from "@/app/data";
-import ScoreDisplay from "@/components/ScoreDisplay";
+import { socialOpp10, socialRisk10, trendingDesc } from "@/app/data";
+import OppRiskDisplay from "@/components/OppRiskDisplay";
 
 export default function () {
   const [opp, setOpp] = useState(socialOpp10);
@@ -24,10 +24,10 @@ export default function () {
   // }, []);
 
   return (
-    <Box>
-      <TitlePanel text='TOP 10 Social' />
+    <Box py={5}>
+      <TitlePanel title='TOP 10 Social' body={trendingDesc}/>
       <Container>
-        <ScoreDisplay opp={opp} risk={risk} />
+        <OppRiskDisplay opp={opp} risk={risk} />
       </Container>
     </Box>
   )

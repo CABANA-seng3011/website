@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -14,7 +16,6 @@ import {
 } from '@mui/material';
 
 // Function to determine color based on score
-// Green, yellow, orange, red
 function getScoreColor(score) {
   if (score >= 0.80) return '#4caf50';
   if (score >= 0.50) return '#ffeb3b';
@@ -48,9 +49,9 @@ function ScoreMeter({ score }) {
   );
 }
 
-function ScoreTable({ title, data }) {
+function ScoreTable({ title, data, valueKey = 'score', link = true }) {
   return (
-    <Box flex={1}>
+    <Box flex={1} minWidth={300}>
       <Typography variant="h6" gutterBottom>
         {title}
       </Typography>
@@ -63,24 +64,35 @@ function ScoreTable({ title, data }) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row, idx) => (
-              <TableRow
-                key={idx}
-                hover
-                sx={{
-                  cursor: 'pointer',
-                  '&:hover': {
-                    backgroundColor: '#f0f0f0',
-                  },
-                }}
-                onClick={() => router.push(`/company/${encodeURIComponent(row.company_name)}`)}
-              >
-                <TableCell>{row.company_name}</TableCell>
-                <TableCell sx={{ width: '200px' }}>
-                  <ScoreMeter score={row.score} />
-                </TableCell>
-              </TableRow>
-            ))}
+            {data.map((row, idx) => {
+              const rowContent = (
+                <TableRow
+                  hover
+                  key={idx}
+                  sx={{
+                    cursor: 'pointer',
+                    '&:hover': {
+                      backgroundColor: '#f0f0f0',
+                    },
+                  }}
+                >
+                  <TableCell>{row.company_name}</TableCell>
+                  <TableCell sx={{ width: '200px' }}>
+                    <ScoreMeter score={row[valueKey]} />
+                  </TableCell>
+                </TableRow>
+              );
+
+              return link ? (
+                <Link
+                  key={idx}
+                  href={`/company/${encodeURIComponent(row.company_name)}`}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  {rowContent}
+                </Link>
+              ) : rowContent;
+            })}
           </TableBody>
         </Table>
       </TableContainer>
@@ -88,12 +100,18 @@ function ScoreTable({ title, data }) {
   );
 }
 
-export default function ScoreDisplay({ opp, risk }) {
-
+export default function FlexDisplay({ datasets }) {
   return (
     <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} mt={4}>
-      <ScoreTable title="Opportunity" data={opp} />
-      <ScoreTable title="Risk" data={risk} />
+      {datasets.map(({ title, data, valueKey, link }, idx) => (
+        <ScoreTable
+          key={idx}
+          title={title}
+          data={data}
+          valueKey={valueKey}
+          link={link}
+        />
+      ))}
     </Stack>
   );
 }
