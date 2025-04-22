@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   Box,
   Typography,
@@ -63,10 +64,26 @@ function ScoreTable({ title, data }) {
           </TableHead>
           <TableBody>
             {data.map((row, idx) => (
-              <TableRow key={idx}>
-                <TableCell>{row.company_name}</TableCell>
-                <TableCell><ScoreMeter score={row.score} /></TableCell>
-              </TableRow>
+              <Link
+                key={idx}
+                href={`/company/${encodeURIComponent(row.company_name)}`}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <TableRow
+                  hover
+                  sx={{
+                    cursor: 'pointer',
+                    '&:hover': {
+                      backgroundColor: '#f0f0f0',
+                    },
+                  }}
+                >
+                  <TableCell>{row.company_name}</TableCell>
+                  <TableCell sx={{ width: '200px' }}>
+                    <ScoreMeter score={row.score} />
+                  </TableCell>
+                </TableRow>
+            </Link>
             ))}
           </TableBody>
         </Table>
