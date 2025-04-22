@@ -161,11 +161,18 @@ export default function Header() {
       zIndex: 1000
     }}>
       <Stack width='100%' height='100%' boxShadow='md' direction='row' alignItems='center' px={2} sx={{display: 'flex'}}>
-        <Box sx={{flex: '0.5'}}>
-          {/* <Link href='/'>
-            <Image src={ADD LOGO HERE} alt={'cabana-logo'} height={60} width={250} />
-          </Link> */}
-        </Box>
+      <Box sx={{ flex: '0.5' }}>
+        <Link href="/" passHref>
+          <Image
+            src="/cabana_logo.png"
+            alt="cabana-logo"
+            width={170}
+            height={170}
+            priority
+            style={{ cursor: 'pointer', objectFit: 'cover', paddingLeft: '10px', }}
+          />
+        </Link>
+      </Box>
         <Stack direction='row' width='100%' height='100%' px={5} sx={{flexGrow:'1'}}>
           {navData.map(({ text, href, subData }, idx) => (
             <HeaderItem title={text} navigateTo={href} subData={subData} key={idx}/>
