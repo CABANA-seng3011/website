@@ -1,13 +1,8 @@
 export const navData = [
-  { text: 'About Us', href: '/about-us' },
+  { text: 'About Us', href: '/' },
   {text: 'Trending', href: '/trending'},
   {text: 'Search a Company', href: '/search'},
-  { text: 'Developers', href: '/dev',
-    subData: [
-      { text: 'Using CABANA API', href: '/dev/api' },
-      { text: 'Suggestions', href: '/dev/contact' },
-    ]
-  }
+  { text: 'Contact Us', href: '/contact'}
 ];
 
 export const trendingDesc = 'The higher the score, the better the company performed in relevant ESG metrics.';

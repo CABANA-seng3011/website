@@ -14,7 +14,7 @@ export default function FlipCard({cardTitle, imagePath, imageAlt, description}) 
   const containerStyle = {
     perspective: '1000px',
     width: '375px',
-    height: '425px',
+    height: '180px',
   };
 
   const flipStyle = {
@@ -36,6 +36,7 @@ export default function FlipCard({cardTitle, imagePath, imageAlt, description}) 
       : '0 4px 8px rgb(6, 55, 118, 0.25)',
     borderRadius: '10px',
     overflow: 'hidden',
+    backgroundColor: '#F5F7FA',
   };
 
   const backStyle = {
@@ -52,14 +53,20 @@ export default function FlipCard({cardTitle, imagePath, imageAlt, description}) 
     >
       <Box sx={flipStyle}>
         <Box sx={frontBackStyle}>
-          <AspectRatio ratio='8/7'>
-            <Image fill src={imagePath} alt={imageAlt}/>
-          </AspectRatio>
+          <Image
+            mt={2}
+            src={imagePath}
+            alt={imageAlt}
+            width={120}
+            height={100}
+            style={{ objectFit: 'cover' }}
+          />
           <Typography
-            mt={3}
+            mt={2}
             className='graphite'
             level='body-lg'
             textAlign='center'
+            fontWeight="bold"
           >
             {cardTitle}
           </Typography>

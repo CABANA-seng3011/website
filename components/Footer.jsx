@@ -29,8 +29,8 @@ export default function Footer() {
 
           </Typography>
           <Stack spacing={0.5}>
-            <Link href='/about-us' underline='hover' color='inherit'>About us</Link>
-            <Link href='/dev/contact' underline='hover' color='inherit'>Contact us</Link>
+            <Link href='/' underline='hover' color='inherit'>About us</Link>
+            <Link href='/contact' underline='hover' color='inherit'>Contact us</Link>
           </Stack>
         </Box>
 
