@@ -2,7 +2,7 @@
 import { Sheet, Stack, Typography } from '@mui/joy';
 import Image from 'next/image';
 import Link from 'next/link';
-import { navData } from '../app/data';
+import { navData } from '../helpers/data';
 import React, { useRef, useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Dropdown from '@mui/joy/Dropdown';

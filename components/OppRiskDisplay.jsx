@@ -11,7 +11,7 @@ import {
   Paper,
   Stack
 } from '@mui/material';
-import ScoreTableBody from '@/components/ScoreTableBody';
+import { ScoreTableBody } from '@/components/ScoreTableBody';
 
 function ScoreTable({ title, data }) {
   return (

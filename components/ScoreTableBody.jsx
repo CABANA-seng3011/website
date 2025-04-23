@@ -17,7 +17,7 @@ function getScoreColor(score) {
   return '#f44336';
 }
 
-function ScoreMeter({ score }) {
+export function ScoreMeter({ score }) {
   const percentage = Math.round(score * 100);
   const color = getScoreColor(score);
 
@@ -43,7 +43,7 @@ function ScoreMeter({ score }) {
   );
 }
 
-export default function ScoreTableBody({ data, scoreFields }) {
+export function ScoreTableBody({ data, scoreFields }) {
   const router = useRouter();
 
   return (

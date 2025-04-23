@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Table, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import ScoreTableBody from '@/components/ScoreTableBody';
-import { top10Nasdaq } from '@/app/data';
+import { ScoreTableBody } from '@/components/ScoreTableBody';
+import { top10Nasdaq } from '@/helpers/data';
 import { Box, Container } from '@mui/joy';
 import TitlePanel from '@/components/TitlePanel';
 
