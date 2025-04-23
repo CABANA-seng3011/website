@@ -4,7 +4,7 @@ import TitlePanel from "@/components/TitlePanel";
 import { fetchNasdaq100Category } from "@/helpers/requests";
 import { Box, Container } from "@mui/joy";
 import { useState, useEffect } from "react";
-import { envOpp10, envRisk10, trendingDesc } from "@/app/data";
+import { envOpp10, envRisk10, trendingDesc } from "@/helpers/data";
 import OppRiskDisplay from "@/components/OppRiskDisplay";
 
 export default function () {

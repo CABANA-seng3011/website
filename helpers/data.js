@@ -8,10 +8,10 @@ export const navData = [
 export const trendingDesc = 'The higher the score, the better the company performed in relevant ESG metrics.';
 
 export const ESGCategories = [
-  'Social Opportunity',
-  'Social Risk',
   'Environmental Opportunity',
   'Environmental Risk',
+  'Social Opportunity',
+  'Social Risk',
   'Governance Opportunity',
   'Governance Risk',
 ];
