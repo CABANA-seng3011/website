@@ -1,5 +1,5 @@
 export const navData = [
-  { text: 'About Us', href: '/about-us' },
+  { text: 'About Us', href: '/' },
   {text: 'Trending', href: '/trending'},
   {text: 'Search a Company', href: '/search'},
   { text: 'Contact Us', href: '/contact'}

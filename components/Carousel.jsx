@@ -3,8 +3,8 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/joy';
 import Image from 'next/image';
 import { useState } from 'react';
-import test1 from '/public/test1.png';
-import test2 from '/public/test2.png';
+import test1 from '@/public/test1.png';
+import test2 from '@/public/test2.png';
 
 const testimonials = [
     {
