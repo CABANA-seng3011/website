@@ -2,19 +2,18 @@
 
 import { Box, Card, CardContent, Typography } from '@mui/joy';
 import Image from 'next/image';
-import test1 from '@/public/test1.png';
-import test2 from '@/public/test2.png';
 
 const testimonials = [
-  {
-    image: test1,
-    quote: `This is perfect!`,
-  },
-  {
-    image: test2,
-    quote: "We're already using your API!",
-  },
-];
+    {
+      image: '/test1.png',
+      quote: `This is perfect!`,
+    },
+    {
+      image: '/test2.png',
+      quote: "We're already using your API!",
+    },
+  ];
+  
 
 export default function TestimonialsGrid() {
   return (
@@ -44,7 +43,9 @@ export default function TestimonialsGrid() {
             width={280}
             height={180}
             style={{ marginBottom: '1rem', objectFit: 'cover' }}
-          />
+            placeholder="empty"
+            />
+
           <CardContent>
             <Typography level="body-md" fontStyle="italic" mb={1}>
               “{testimonial.quote}”
