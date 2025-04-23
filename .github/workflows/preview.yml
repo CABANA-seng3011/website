@@ -3,9 +3,13 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  push:
-    branches-ignore:
+  pull_request:
+    branches:
       - main
+  push:
+    branches:
+      - deployment
+
 jobs:
   Preview:
     runs-on: ubuntu-latest
