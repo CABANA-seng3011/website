@@ -5,8 +5,30 @@ import TitlePanel from '@/components/TitlePanel';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import heroImage from '/public/home_guy.png';
-import phoneGraphic from '/public/home_guy.png';
+import collabImage from '/public/collab.jpg';
 import GetStartedButton from '@/components/GetStartedButton';
+import FlipCard from '../../../components/FlipCard';
+
+const enviroDesc = 'The environmental pillar focuses on sustainability efforts and the impact of organisational practices on the planet.'
+const socialDesc = 'The social pillar addresses community well-being, labor practices, and social responsibility.'
+const govDesc = 'The governance pillar emphasises corporate transparency, leadership integrity, and regulatory compliance.'
+const esgItems = [
+  {
+    title: 'Environmental',
+    description: enviroDesc,
+    imagePath: '/enviro.png',
+  },
+  {
+    title: 'Social',
+    description: socialDesc,
+    imagePath: '/social.png',
+  },
+  {
+    title: 'Governance',
+    description: govDesc,
+    imagePath: '/gov.png',
+  },
+];
 
 export default function Home() {
   const router = useRouter();
@@ -48,37 +70,42 @@ export default function Home() {
         <Typography level='h2' fontSize='2rem' mb={1}>
           What is ESG Data?
         </Typography>
-        <Typography level='body-md' mb={2}>
-          bla bla <br />
-          paragraph ish on 3 sectors, pillar stuff we have rn <br />
+        <Typography level='body-md' mb={2} width='1000px' mx='auto'>
+          ESG data helps paint a clearer picture of how a company is doing when it comes to the environment, social impact, and how it's run.
+          <br />
+          More and more investors are using ESG data 
+          to make smarter, more informed and more successful decisions.
+          <br/>
           <b>Click on each to learn more</b>
         </Typography>
-        <Grid container spacing={2} justifyContent='center'>
-          {['Environmental', 'Social', 'Governance'].map((item) => (
-            <Grid key={item} xs={12} sm={4}>
-              <Card variant='soft' sx={{ py: 4 }}>
-                <CardContent>
-                  <Typography level='title-md'>{item}</Typography>
-                </CardContent>
-              </Card>
+        <Grid container spacing={2} justifyContent="center" width="80%" mx="auto">
+          {esgItems.map(({ title, description, imagePath, imageAlt }) => (
+            <Grid key={title} xs={12} sm={4}>
+              <FlipCard
+                imagePath={imagePath}
+                imageAlt={imageAlt}
+                cardTitle={title}
+                description={description}
+              />
             </Grid>
           ))}
         </Grid>
+
       </Box>
 
       {/* Section: Stats Section */}
-      <Box py={10} textAlign='center' sx={{ backgroundColor: '#f7f7f7' }}>
+      <Box py={10} textAlign='center' sx={{ backgroundColor: '#F5F7FA' }}>
         <Typography level='h2' fontSize='2rem' mb={1}>
           Containing a <span style={{ color: '#4CAF50' }}>wealth</span> of data
         </Typography>
         <Typography level='body-md' mb={4}>
-          We offer a widespread selection of metrics for analysis
+          We offer a widespread selection of metrics for analysis from organisation across the globe to give you the best insights possible.
         </Typography>
         <Grid container spacing={2} justifyContent='center'>
           {[
-            ['X', 'companies'],
-            ['X', 'metrics'],
-            ['X', 'users'],
+            ['90+', 'companies'],
+            ['100+', 'metrics'],
+            ['6', 'unique features'],
             ['0', 'ads'],
           ].map(([value, label]) => (
             <Grid key={label} xs={6} sm={3}>
@@ -98,56 +125,35 @@ export default function Home() {
         <Grid container spacing={4} alignItems='center'>
           <Grid xs={12} md={6}>
             <Image
-              src={phoneGraphic}
+              src={collabImage}
               alt='how to use graphic'
               style={{ maxWidth: '100%', height: 'auto' }}
             />
           </Grid>
-          <Grid xs={12} md={6}>
+          <Grid
+            xs={12}
+            md={6}
+            sx={{
+              backgroundColor: '#F5F7FA',
+              height: '400px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              px: 4,
+            }}
+          >
             <Typography level='h2' fontSize='1.8rem' mb={2}>
-              How to use
+              Using our website
             </Typography>
-            <Typography level='body-md' mb={2}>
-              Search a company, offer a score, use score to check out how well it's performing. <br />
-              Gather info, look at news and finances related to that company as well. <br />
-              Maybe make this numbered steps.
+            <Typography level='body-md' mb={2} width='600px'>
+              We offer the ability to see trending companies, compare companies, and view specific company profiles.
+              <br/>
+              See how well each company is performing in each of the three ESG pillars, as well as stock price to ensure that you are making the best decision possible.
             </Typography>
-            <Button color='success' onClick={() => router.push('/search')}>
-              Get started (to search page)
-            </Button>
+            <Box mt={5} sx={{ alignSelf: 'flex-start' }}>
+              <GetStartedButton />
+            </Box>
           </Grid>
-        </Grid>
-      </Box>
-
-      {/* Section: Testimonials */}
-      <Box py={10} textAlign='center'>
-        <Typography level='h2' fontSize='1.8rem' mb={1}>
-          Hear from our users
-        </Typography>
-        <Typography level='body-sm' mb={4}>"testimonials" lol</Typography>
-        <Grid container spacing={2} justifyContent='center'>
-          {[
-            { text: 'LOVE', img: '/public/testimonial1.png' },
-            { text: 'LOVE', img: '/public/testimonial2.png' },
-            { text: 'ATE', img: '/public/testimonial3.png' },
-          ].map(({ text, img }, idx) => (
-            <Grid xs={12} sm={4} key={idx}>
-              <Card>
-                <Image
-                  src={img}
-                  alt={text}
-                  width={400}
-                  height={250}
-                  style={{ width: '100%', height: 'auto' }}
-                />
-                <CardContent>
-                  <Typography level='body-md' textAlign='center'>
-                    {text}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
         </Grid>
       </Box>
     </Box>
