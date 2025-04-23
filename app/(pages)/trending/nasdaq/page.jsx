@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { fetchNasdaq100Category } from '@/helpers/requests';
-import ScoreTableBody from '@/components/ScoreTableBody';
+import { ScoreTableBody } from '@/components/ScoreTableBody';
 import { top10Nasdaq } from '@/helpers/data';
 import { Box, Container } from '@mui/joy';
 import TitlePanel from '@/components/TitlePanel';

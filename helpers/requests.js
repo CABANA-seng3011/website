@@ -3,9 +3,9 @@ const URL = 'https://esg-hub-staging.up.railway.app';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////// GET /////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export async function fetchGetMetrics(category, company) {
-  const req = '/get?category=' + category + '&columns=metric_name,metric_value,percentile&company_name=company'
-
+export async function fetchGetMetrics(company) {
+  const req = '/get/nasdaq100?columns=category,metric_name,metric_description,metric_value,metric_unit,percentile&company_name=' + company;
+  console.log('Request:', URL + req);
   const res = await fetch(URL + req);
   if (!res.ok) {
     throw new Error(`Failed to fetch data: ${res.statusText}`);
@@ -19,18 +19,6 @@ export async function fetchGetMetrics(category, company) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////// NASDAQ /////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export async function fetchNasdaq100() {
-  const req = '/get/nasdaq100?columns=company_name,metric_name,metric_value,percentile';
-
-  const res = await fetch(URL + req);
-  if (!res.ok) {
-    throw new Error(`Failed to fetch data: ${res.statusText}`);
-  }
-
-  const json = await res.json();
-  const data = JSON.parse(json);
-  return data.events;
-}
 
 export async function fetchNasdaq100Category(category, top10) {
   const req = '/score?category=' + category;
@@ -100,5 +88,40 @@ export async function fetchFinOverview(ticker) {
   }
 
   const json = await res.json();
+  console.log(json)
   return json;
+}
+
+export async function fetchFinOptions(ticker) {
+  const req = '/financesOptions/' + ticker;
+
+  const res = await fetch(URL + req);
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.statusText}`);
+  }
+
+  const json = await res.json();
+  return json.calls;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////// NEWS /////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+export async function fetchNewsSentiment(ticker) {
+  const res = await fetch(URL + '/newsSentiment', {
+    method: "POST",
+    body: JSON.stringify({
+      stockCode: ticker,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch data: ${res.statusText}`);
+  }
+
+  const json = await res.json();
+  return json.summary;
 }
