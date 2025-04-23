@@ -4,6 +4,8 @@ import { Container, Grid, Box, Typography, Card, CardContent, Button } from '@mu
 import TitlePanel from '@/components/TitlePanel';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import heroImage from '@/public/home_guy.png';
+import collabImage from '@/public/collab.jpg';
 import GetStartedButton from '@/components/GetStartedButton';
 import FlipCard from '@/components/FlipCard';
 import Carousel from '@/components/Carousel';
@@ -57,8 +59,9 @@ export default function Home() {
             <Grid xs={12} md={6}>
               <Box display='flex' justifyContent='center'>
                 <Image
-                  src={'/public/home_guy.png'}
+                  src={heroImage}
                   alt='ESG data illustration'
+                  width='500'
                   style={{ maxWidth: '65%', height: 'auto' }}
                 />
               </Box>
@@ -135,7 +138,7 @@ export default function Home() {
         <Grid container spacing={4} alignItems='center'>
           <Grid xs={12} md={6}>
             <Image
-              src={'/public/collab.jpg'}
+              src={collabImage}
               alt='how to use graphic'
               style={{ maxWidth: '100%', height: 'auto' }}
             />
