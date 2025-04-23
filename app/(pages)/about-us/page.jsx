@@ -17,16 +17,19 @@ const esgItems = [
   {
     title: 'Environmental',
     description: enviroDesc,
+    imageAlt: 'Green outlined icon of a building icon',
     imagePath: '/enviro.png',
   },
   {
     title: 'Social',
     description: socialDesc,
+    imageAlt: 'Green outlined icon of a group of people icon',
     imagePath: '/social.png',
   },
   {
     title: 'Governance',
     description: govDesc,
+    imageAlt: 'Green outlined icon of a three hands facing each other',
     imagePath: '/gov.png',
   },
 ];

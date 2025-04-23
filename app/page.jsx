@@ -85,8 +85,7 @@ export default function Home() {
         <Grid container spacing={2} justifyContent="center" width="80%" mx="auto">
           {esgItems.map(({ title, description, imagePath, imageAlt }) => (
             <Grid 
-              key={title} 
-              item 
+              key={title}  
               xs={12} 
               sm={6} 
               md={4} 
