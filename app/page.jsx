@@ -4,11 +4,11 @@ import { Container, Grid, Box, Typography, Card, CardContent, Button } from '@mu
 import TitlePanel from '@/components/TitlePanel';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import heroImage from '/public/home_guy.png';
-import collabImage from '/public/collab.jpg';
+import heroImage from '@/public/home_guy.png';
+import collabImage from '@/public/collab.jpg';
 import GetStartedButton from '@/components/GetStartedButton';
-import FlipCard from '../components/FlipCard';
-import Carousel from '../components/Carousel';
+import FlipCard from '@/components/FlipCard';
+import Carousel from '@/components/Carousel';
 
 const enviroDesc = 'The environmental pillar focuses on sustainability efforts and the impact of organisational practices on the planet.'
 const socialDesc = 'The social pillar addresses community well-being, labor practices, and social responsibility.'
