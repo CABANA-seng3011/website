@@ -46,9 +46,6 @@ function ESGTable ({ scores }) {
 export default function CompanyOverview({ scores }) {
   return (
     <Box>
-      <Typography>
-        STOCK Ticker:
-      </Typography>
       <ESGTable scores={scores} />
     </Box>
   );
