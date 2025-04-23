@@ -42,7 +42,9 @@ export default function TestimonialsGrid() {
             width={280}
             height={180}
             style={{ marginBottom: '1rem', objectFit: 'cover' }}
-          />
+            placeholder="empty"
+            />
+
           <CardContent>
             <Typography level="body-md" fontStyle="italic" mb={1}>
               “{testimonial.quote}”
