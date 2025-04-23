@@ -8,6 +8,7 @@ import heroImage from '/public/home_guy.png';
 import collabImage from '/public/collab.jpg';
 import GetStartedButton from '@/components/GetStartedButton';
 import FlipCard from '../../../components/FlipCard';
+import Carousel from '../../../components/Carousel';
 
 const enviroDesc = 'The environmental pillar focuses on sustainability efforts and the impact of organisational practices on the planet.'
 const socialDesc = 'The social pillar addresses community well-being, labor practices, and social responsibility.'
@@ -80,7 +81,15 @@ export default function Home() {
         </Typography>
         <Grid container spacing={2} justifyContent="center" width="80%" mx="auto">
           {esgItems.map(({ title, description, imagePath, imageAlt }) => (
-            <Grid key={title} xs={12} sm={4}>
+            <Grid 
+              key={title} 
+              item 
+              xs={12} 
+              sm={6} 
+              md={4} 
+              display="flex" 
+              justifyContent="center"
+            >
               <FlipCard
                 imagePath={imagePath}
                 imageAlt={imageAlt}
@@ -90,6 +99,7 @@ export default function Home() {
             </Grid>
           ))}
         </Grid>
+
 
       </Box>
 
@@ -155,6 +165,13 @@ export default function Home() {
             </Box>
           </Grid>
         </Grid>
+      </Box>
+      {/* Section: Testimonials Carousel */}
+      <Box py={10} sx={{ backgroundColor: '#F0F4F8' }}>
+        <Typography level='h2' fontSize='2rem' mb={4} textAlign="center">
+          Hear what our users have to say!
+        </Typography>
+        <Carousel />
       </Box>
     </Box>
   );
