@@ -2,16 +2,14 @@
 
 import { Box, Card, CardContent, Typography } from '@mui/joy';
 import Image from 'next/image';
-import test1 from '@/public/test1.png';
-import test2 from '@/public/test2.png';
 
 const testimonials = [
   {
-    image: test1,
+    image: '/public/test1.png',
     quote: `This is perfect!`,
   },
   {
-    image: test2,
+    image: '/public/test2.png',
     quote: "We're already using your API!",
   },
 ];
