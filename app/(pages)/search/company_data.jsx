@@ -1,6 +1,6 @@
 const comp_constants = [
   {
-    "name": "Apple Inc.",
+    "company_name": "Apple Inc",
     "ticker": "AAPL",
     "scores": {
       "environmental": 29,
@@ -10,7 +10,7 @@ const comp_constants = [
     "stockPrice": 322
   },
   {
-    "name": "Microsoft Corp",
+    "company_name": "Microsoft Corp",
     "ticker": "MSFT",
     "scores": {
       "environmental": 87,
@@ -20,7 +20,7 @@ const comp_constants = [
     "stockPrice": 288
   },
   {
-    "name": "NVIDIA Corp",
+    "company_name": "NVIDIA Corp",
     "ticker": "NVDA",
     "scores": {
       "environmental": 98,
@@ -30,7 +30,7 @@ const comp_constants = [
     "stockPrice": 412
   },
   {
-    "name": "Amazon.com Inc",
+    "company_name": "Amazon.com Inc",
     "ticker": "AMZN",
     "scores": {
       "environmental": 82,
@@ -40,7 +40,7 @@ const comp_constants = [
     "stockPrice": 56
   },
   {
-    "name": "Broadcom Inc",
+    "company_name": "Broadcom Inc",
     "ticker": "AVGO",
     "scores": {
       "environmental": 77,
@@ -50,7 +50,7 @@ const comp_constants = [
     "stockPrice": 473
   },
   {
-    "name": "Meta Platforms Inc",
+    "company_name": "Meta Platforms Inc",
     "ticker": "META",
     "scores": {
       "environmental": 68,
@@ -60,7 +60,7 @@ const comp_constants = [
     "stockPrice": 202
   },
   {
-    "name": "Costco Wholesale Corp",
+    "company_name": "Costco Wholesale Corp",
     "ticker": "COST",
     "scores": {
       "environmental": 92,
@@ -70,7 +70,7 @@ const comp_constants = [
     "stockPrice": 467
   },
   {
-    "name": "Netflix Inc",
+    "company_name": "Netflix Inc",
     "ticker": "NFLX",
     "scores": {
       "environmental": 62,
@@ -80,7 +80,7 @@ const comp_constants = [
     "stockPrice": 54
   },
   {
-    "name": "Tesla Inc",
+    "company_name": "Tesla Inc",
     "ticker": "TSLA",
     "scores": {
       "environmental": 52,
@@ -90,7 +90,7 @@ const comp_constants = [
     "stockPrice": 120
   },
   {
-    "name": "Alphabet Inc",
+    "company_name": "Alphabet Inc",
     "ticker": "GOOGL",
     "scores": {
       "environmental": 77,
@@ -100,7 +100,7 @@ const comp_constants = [
     "stockPrice": 440
   },
   {
-    "name": "T-Mobile US Inc",
+    "company_name": "T-Mobile US Inc",
     "ticker": "TMUS",
     "scores": {
       "environmental": 77,
@@ -110,7 +110,7 @@ const comp_constants = [
     "stockPrice": 375
   },
   {
-    "name": "Cisco Systems Inc",
+    "company_name": "Cisco Systems Inc",
     "ticker": "CSCO",
     "scores": {
       "environmental": 88,
@@ -120,7 +120,7 @@ const comp_constants = [
     "stockPrice": 488
   },
   {
-    "name": "PepsiCo Inc",
+    "company_name": "PepsiCo Inc",
     "ticker": "PEP",
     "scores": {
       "environmental": 92,
@@ -130,7 +130,7 @@ const comp_constants = [
     "stockPrice": 461
   },
   {
-    "name": "Palantir Technologies Inc",
+    "company_name": "Palantir Technologies Inc",
     "ticker": "PLTR",
     "scores": {
       "environmental": 95,
@@ -140,7 +140,7 @@ const comp_constants = [
     "stockPrice": 471
   },
   {
-    "name": "Intuitive Surgical Inc",
+    "company_name": "Intuitive Surgical Inc",
     "ticker": "ISRG",
     "scores": {
       "environmental": 75,
@@ -150,7 +150,7 @@ const comp_constants = [
     "stockPrice": 289
   },
   {
-    "name": "Amgen Inc",
+    "company_name": "Amgen Inc",
     "ticker": "AMGN",
     "scores": {
       "environmental": 75,
@@ -160,7 +160,7 @@ const comp_constants = [
     "stockPrice": 70
   },
   {
-    "name": "Intuit Inc",
+    "company_name": "Intuit Inc",
     "ticker": "INTU",
     "scores": {
       "environmental": 89,
@@ -170,7 +170,7 @@ const comp_constants = [
     "stockPrice": 477
   },
   {
-    "name": "Adobe Inc",
+    "company_name": "Adobe Inc",
     "ticker": "ADBE",
     "scores": {
       "environmental": 75,
@@ -180,7 +180,7 @@ const comp_constants = [
     "stockPrice": 435
   },
   {
-    "name": "Qualcomm Inc",
+    "company_name": "Qualcomm Inc",
     "ticker": "QCOM",
     "scores": {
       "environmental": 83,
@@ -190,7 +190,7 @@ const comp_constants = [
     "stockPrice": 98
   },
   {
-    "name": "Booking Holdings Inc",
+    "company_name": "Booking Holdings Inc",
     "ticker": "BKNG",
     "scores": {
       "environmental": 63,
@@ -200,7 +200,7 @@ const comp_constants = [
     "stockPrice": 417
   },
   {
-    "name": "Advanced Micro Devices Inc",
+    "company_name": "Advanced Micro Devices Inc",
     "ticker": "AMD",
     "scores": {
       "environmental": 59,
@@ -210,7 +210,7 @@ const comp_constants = [
     "stockPrice": 325
   },
   {
-    "name": "Texas Instruments Inc",
+    "company_name": "Texas Instruments Inc",
     "ticker": "TXN",
     "scores": {
       "environmental": 53,
@@ -220,7 +220,7 @@ const comp_constants = [
     "stockPrice": 442
   },
   {
-    "name": "Gilead Sciences Inc",
+    "company_name": "Gilead Sciences Inc",
     "ticker": "GILD",
     "scores": {
       "environmental": 63,
@@ -230,7 +230,7 @@ const comp_constants = [
     "stockPrice": 71
   },
   {
-    "name": "Comcast Corp",
+    "company_name": "Comcast Corp",
     "ticker": "CMCSA",
     "scores": {
       "environmental": 64,
@@ -240,7 +240,7 @@ const comp_constants = [
     "stockPrice": 423
   },
   {
-    "name": "Honeywell International Inc",
+    "company_name": "Honeywell International Inc",
     "ticker": "HON",
     "scores": {
       "environmental": 78,
@@ -250,7 +250,7 @@ const comp_constants = [
     "stockPrice": 496
   },
   {
-    "name": "Vertex Pharmaceuticals Inc",
+    "company_name": "Vertex Pharmaceuticals Inc",
     "ticker": "VRTX",
     "scores": {
       "environmental": 68,
@@ -260,7 +260,7 @@ const comp_constants = [
     "stockPrice": 171
   },
   {
-    "name": "Automatic Data Processing Inc",
+    "company_name": "Automatic Data Processing Inc",
     "ticker": "ADP",
     "scores": {
       "environmental": 69,
@@ -270,7 +270,7 @@ const comp_constants = [
     "stockPrice": 252
   },
   {
-    "name": "Applied Materials Inc",
+    "company_name": "Applied Materials Inc",
     "ticker": "AMAT",
     "scores": {
       "environmental": 71,
@@ -280,7 +280,7 @@ const comp_constants = [
     "stockPrice": 309
   },
   {
-    "name": "Palo Alto Networks Inc",
+    "company_name": "Palo Alto Networks Inc",
     "ticker": "PANW",
     "scores": {
       "environmental": 70,
@@ -290,7 +290,7 @@ const comp_constants = [
     "stockPrice": 109
   },
   {
-    "name": "MercadoLibre Inc",
+    "company_name": "MercadoLibre Inc",
     "ticker": "MELI",
     "scores": {
       "environmental": 77,
@@ -300,7 +300,7 @@ const comp_constants = [
     "stockPrice": 490
   },
   {
-    "name": "Starbucks Corp",
+    "company_name": "Starbucks Corp",
     "ticker": "SBUX",
     "scores": {
       "environmental": 53,
@@ -310,7 +310,7 @@ const comp_constants = [
     "stockPrice": 363
   },
   {
-    "name": "Intel Corp",
+    "company_name": "Intel Corp",
     "ticker": "INTC",
     "scores": {
       "environmental": 62,
@@ -320,7 +320,7 @@ const comp_constants = [
     "stockPrice": 334
   },
   {
-    "name": "Mondelez International Inc",
+    "company_name": "Mondelez International Inc",
     "ticker": "MDLZ",
     "scores": {
       "environmental": 88,
@@ -330,7 +330,7 @@ const comp_constants = [
     "stockPrice": 95
   },
   {
-    "name": "Analog Devices Inc",
+    "company_name": "Analog Devices Inc",
     "ticker": "ADI",
     "scores": {
       "environmental": 92,
@@ -340,7 +340,7 @@ const comp_constants = [
     "stockPrice": 474
   },
   {
-    "name": "Cintas Corp",
+    "company_name": "Cintas Corp",
     "ticker": "CTAS",
     "scores": {
       "environmental": 65,
@@ -350,7 +350,7 @@ const comp_constants = [
     "stockPrice": 144
   },
   {
-    "name": "KLA Corp",
+    "company_name": "KLA Corp",
     "ticker": "KLAC",
     "scores": {
       "environmental": 89,
@@ -360,7 +360,7 @@ const comp_constants = [
     "stockPrice": 468
   },
   {
-    "name": "Lam Research Corp",
+    "company_name": "Lam Research Corp",
     "ticker": "LRCX",
     "scores": {
       "environmental": 51,
@@ -370,7 +370,7 @@ const comp_constants = [
     "stockPrice": 378
   },
   {
-    "name": "CrowdStrike Holdings Inc",
+    "company_name": "CrowdStrike Holdings Inc",
     "ticker": "CRWD",
     "scores": {
       "environmental": 70,
@@ -380,7 +380,7 @@ const comp_constants = [
     "stockPrice": 328
   },
   {
-    "name": "Micron Technology Inc",
+    "company_name": "Micron Technology Inc",
     "ticker": "MU",
     "scores": {
       "environmental": 95,
@@ -390,7 +390,7 @@ const comp_constants = [
     "stockPrice": 345
   },
   {
-    "name": "Microstrategy Inc",
+    "company_name": "Microstrategy Inc",
     "ticker": "MSTR",
     "scores": {
       "environmental": 95,
@@ -400,7 +400,7 @@ const comp_constants = [
     "stockPrice": 193
   },
   {
-    "name": "PDD Holdings Inc",
+    "company_name": "PDD Holdings Inc",
     "ticker": "PDD",
     "scores": {
       "environmental": 93,
@@ -410,7 +410,7 @@ const comp_constants = [
     "stockPrice": 301
   },
   {
-    "name": "Applovin Corp",
+    "company_name": "Applovin Corp",
     "ticker": "APP",
     "scores": {
       "environmental": 96,
@@ -420,7 +420,7 @@ const comp_constants = [
     "stockPrice": 444
   },
   {
-    "name": "Fortinet Inc",
+    "company_name": "Fortinet Inc",
     "ticker": "FTNT",
     "scores": {
       "environmental": 94,
@@ -430,7 +430,7 @@ const comp_constants = [
     "stockPrice": 495
   },
   {
-    "name": "DoorDash Inc",
+    "company_name": "DoorDash Inc",
     "ticker": "DASH",
     "scores": {
       "environmental": 67,
@@ -440,7 +440,7 @@ const comp_constants = [
     "stockPrice": 109
   },
   {
-    "name": "Cadence Design Systems Inc",
+    "company_name": "Cadence Design Systems Inc",
     "ticker": "CDNS",
     "scores": {
       "environmental": 82,
@@ -450,7 +450,7 @@ const comp_constants = [
     "stockPrice": 244
   },
   {
-    "name": "Regeneron Pharmaceuticals Inc",
+    "company_name": "Regeneron Pharmaceuticals Inc",
     "ticker": "REGN",
     "scores": {
       "environmental": 86,
@@ -460,7 +460,7 @@ const comp_constants = [
     "stockPrice": 497
   },
   {
-    "name": "Synopsys Inc",
+    "company_name": "Synopsys Inc",
     "ticker": "SNPS",
     "scores": {
       "environmental": 82,
@@ -470,7 +470,7 @@ const comp_constants = [
     "stockPrice": 205
   },
   {
-    "name": "Marriott International Inc",
+    "company_name": "Marriott International Inc",
     "ticker": "MAR",
     "scores": {
       "environmental": 79,
@@ -480,7 +480,7 @@ const comp_constants = [
     "stockPrice": 161
   },
   {
-    "name": "Roper Technologies Inc",
+    "company_name": "Roper Technologies Inc",
     "ticker": "ROP",
     "scores": {
       "environmental": 87,
@@ -490,7 +490,7 @@ const comp_constants = [
     "stockPrice": 226
   },
   {
-    "name": "PayPal Holdings Inc",
+    "company_name": "PayPal Holdings Inc",
     "ticker": "PYPL",
     "scores": {
       "environmental": 82,
@@ -500,7 +500,7 @@ const comp_constants = [
     "stockPrice": 86
   },
   {
-    "name": "American Electric Power Company Inc",
+    "company_name": "American Electric Power Company Inc",
     "ticker": "AEP",
     "scores": {
       "environmental": 61,
@@ -510,7 +510,7 @@ const comp_constants = [
     "stockPrice": 248
   },
   {
-    "name": "Monster Beverage Corp",
+    "company_name": "Monster Beverage Corp",
     "ticker": "MNST",
     "scores": {
       "environmental": 87,
@@ -520,7 +520,7 @@ const comp_constants = [
     "stockPrice": 114
   },
   {
-    "name": "ASML Holding NV",
+    "company_name": "ASML Holding NV",
     "ticker": "ASML",
     "scores": {
       "environmental": 80,
@@ -530,7 +530,7 @@ const comp_constants = [
     "stockPrice": 236
   },
   {
-    "name": "Autodesk Inc",
+    "company_name": "Autodesk Inc",
     "ticker": "ADSK",
     "scores": {
       "environmental": 87,
@@ -540,7 +540,7 @@ const comp_constants = [
     "stockPrice": 369
   },
   {
-    "name": "Copart Inc",
+    "company_name": "Copart Inc",
     "ticker": "CPRT",
     "scores": {
       "environmental": 96,
@@ -550,7 +550,7 @@ const comp_constants = [
     "stockPrice": 319
   },
   {
-    "name": "Paychex Inc",
+    "company_name": "Paychex Inc",
     "ticker": "PAYX",
     "scores": {
       "environmental": 84,
@@ -560,7 +560,7 @@ const comp_constants = [
     "stockPrice": 159
   },
   {
-    "name": "CSX Corp",
+    "company_name": "CSX Corp",
     "ticker": "CSX",
     "scores": {
       "environmental": 94,
@@ -570,7 +570,7 @@ const comp_constants = [
     "stockPrice": 343
   },
   {
-    "name": "Charter Communications Inc",
+    "company_name": "Charter Communications Inc",
     "ticker": "CHTR",
     "scores": {
       "environmental": 95,
@@ -580,7 +580,7 @@ const comp_constants = [
     "stockPrice": 318
   },
   {
-    "name": "Paccar Inc",
+    "company_name": "Paccar Inc",
     "ticker": "PCAR",
     "scores": {
       "environmental": 98,
@@ -590,7 +590,7 @@ const comp_constants = [
     "stockPrice": 292
   },
   {
-    "name": "Workday Inc",
+    "company_name": "Workday Inc",
     "ticker": "WDAY",
     "scores": {
       "environmental": 86,
@@ -600,7 +600,7 @@ const comp_constants = [
     "stockPrice": 65
   },
   {
-    "name": "Airbnb Inc",
+    "company_name": "Airbnb Inc",
     "ticker": "ABNB",
     "scores": {
       "environmental": 82,
@@ -610,7 +610,7 @@ const comp_constants = [
     "stockPrice": 103
   },
   {
-    "name": "Keurig Dr Pepper Inc",
+    "company_name": "Keurig Dr Pepper Inc",
     "ticker": "KDP",
     "scores": {
       "environmental": 91,
@@ -620,7 +620,7 @@ const comp_constants = [
     "stockPrice": 222
   },
   {
-    "name": "Exelon Corp",
+    "company_name": "Exelon Corp",
     "ticker": "EXC",
     "scores": {
       "environmental": 55,
@@ -630,7 +630,7 @@ const comp_constants = [
     "stockPrice": 432
   },
   {
-    "name": "Ross Stores Inc",
+    "company_name": "Ross Stores Inc",
     "ticker": "ROST",
     "scores": {
       "environmental": 78,
@@ -640,7 +640,7 @@ const comp_constants = [
     "stockPrice": 60
   },
   {
-    "name": "Marvell Technology Inc",
+    "company_name": "Marvell Technology Inc",
     "ticker": "MRVL",
     "scores": {
       "environmental": 63,
@@ -650,7 +650,7 @@ const comp_constants = [
     "stockPrice": 345
   },
   {
-    "name": "Fastenal Co",
+    "company_name": "Fastenal Co",
     "ticker": "FAST",
     "scores": {
       "environmental": 80,
@@ -660,7 +660,7 @@ const comp_constants = [
     "stockPrice": 146
   },
   {
-    "name": "NXP Semiconductors NV",
+    "company_name": "NXP Semiconductors NV",
     "ticker": "NXPI",
     "scores": {
       "environmental": 57,
@@ -670,7 +670,7 @@ const comp_constants = [
     "stockPrice": 173
   },
   {
-    "name": "Verisk Analytics Inc",
+    "company_name": "Verisk Analytics Inc",
     "ticker": "VRSK",
     "scores": {
       "environmental": 75,
@@ -680,7 +680,7 @@ const comp_constants = [
     "stockPrice": 167
   },
   {
-    "name": "AstraZeneca PLC",
+    "company_name": "AstraZeneca PLC",
     "ticker": "AZN",
     "scores": {
       "environmental": 95,
@@ -690,7 +690,7 @@ const comp_constants = [
     "stockPrice": 280
   },
   {
-    "name": "Xcel Energy Inc",
+    "company_name": "Xcel Energy Inc",
     "ticker": "XEL",
     "scores": {
       "environmental": 55,
@@ -700,7 +700,7 @@ const comp_constants = [
     "stockPrice": 59
   },
   {
-    "name": "Coca-Cola Europacific Partners PLC",
+    "company_name": "Coca-Cola Europacific Partners PLC",
     "ticker": "CCEP",
     "scores": {
       "environmental": 91,
@@ -710,7 +710,7 @@ const comp_constants = [
     "stockPrice": 366
   },
   {
-    "name": "Axon Enterprise Inc",
+    "company_name": "Axon Enterprise Inc",
     "ticker": "AXON",
     "scores": {
       "environmental": 93,
@@ -720,7 +720,7 @@ const comp_constants = [
     "stockPrice": 118
   },
   {
-    "name": "Diamondback Energy Inc",
+    "company_name": "Diamondback Energy Inc",
     "ticker": "FANG",
     "scores": {
       "environmental": 93,
@@ -730,7 +730,7 @@ const comp_constants = [
     "stockPrice": 77
   },
   {
-    "name": "Kraft Heinz Co",
+    "company_name": "Kraft Heinz Co",
     "ticker": "KHC",
     "scores": {
       "environmental": 95,
@@ -740,7 +740,7 @@ const comp_constants = [
     "stockPrice": 340
   },
   {
-    "name": "Electronic Arts Inc",
+    "company_name": "Electronic Arts Inc",
     "ticker": "EA",
     "scores": {
       "environmental": 67,
@@ -750,7 +750,7 @@ const comp_constants = [
     "stockPrice": 422
   },
   {
-    "name": "Baker Hughes Co",
+    "company_name": "Baker Hughes Co",
     "ticker": "BKR",
     "scores": {
       "environmental": 87,
@@ -760,7 +760,7 @@ const comp_constants = [
     "stockPrice": 428
   },
   {
-    "name": "Take-Two Interactive Software Inc",
+    "company_name": "Take-Two Interactive Software Inc",
     "ticker": "TTWO",
     "scores": {
       "environmental": 91,
@@ -770,7 +770,7 @@ const comp_constants = [
     "stockPrice": 497
   },
   {
-    "name": "Cognizant Technology Solutions Corp",
+    "company_name": "Cognizant Technology Solutions Corp",
     "ticker": "CTSH",
     "scores": {
       "environmental": 66,
@@ -780,7 +780,7 @@ const comp_constants = [
     "stockPrice": 380
   },
   {
-    "name": "Old Dominion Freight Line Inc",
+    "company_name": "Old Dominion Freight Line Inc",
     "ticker": "ODFL",
     "scores": {
       "environmental": 59,
@@ -790,7 +790,7 @@ const comp_constants = [
     "stockPrice": 187
   },
   {
-    "name": "IDEXX Laboratories Inc",
+    "company_name": "IDEXX Laboratories Inc",
     "ticker": "IDXX",
     "scores": {
       "environmental": 53,
@@ -800,7 +800,7 @@ const comp_constants = [
     "stockPrice": 298
   },
   {
-    "name": "Atlassian Corporation Ltd",
+    "company_name": "Atlassian Corporation Ltd",
     "ticker": "TEAM",
     "scores": {
       "environmental": 74,
@@ -810,7 +810,7 @@ const comp_constants = [
     "stockPrice": 433
   },
   {
-    "name": "Lululemon Athletica Inc",
+    "company_name": "Lululemon Athletica Inc",
     "ticker": "LULU",
     "scores": {
       "environmental": 63,
@@ -820,7 +820,7 @@ const comp_constants = [
     "stockPrice": 189
   },
   {
-    "name": "CoStar Group Inc",
+    "company_name": "CoStar Group Inc",
     "ticker": "CSGP",
     "scores": {
       "environmental": 50,
@@ -830,7 +830,7 @@ const comp_constants = [
     "stockPrice": 322
   },
   {
-    "name": "Datadog Inc",
+    "company_name": "Datadog Inc",
     "ticker": "DDOG",
     "scores": {
       "environmental": 71,
@@ -840,7 +840,7 @@ const comp_constants = [
     "stockPrice": 168
   },
   {
-    "name": "Zscaler Inc",
+    "company_name": "Zscaler Inc",
     "ticker": "ZS",
     "scores": {
       "environmental": 79,
@@ -850,7 +850,7 @@ const comp_constants = [
     "stockPrice": 359
   },
   {
-    "name": "ANSYS Inc",
+    "company_name": "ANSYS Inc",
     "ticker": "ANSS",
     "scores": {
       "environmental": 91,
@@ -860,7 +860,7 @@ const comp_constants = [
     "stockPrice": 109
   },
   {
-    "name": "Dexcom Inc",
+    "company_name": "Dexcom Inc",
     "ticker": "DXCM",
     "scores": {
       "environmental": 100,
@@ -870,7 +870,7 @@ const comp_constants = [
     "stockPrice": 392
   },
   {
-    "name": "Trade Desk Inc",
+    "company_name": "Trade Desk Inc",
     "ticker": "TTD",
     "scores": {
       "environmental": 61,
@@ -880,7 +880,7 @@ const comp_constants = [
     "stockPrice": 229
   },
   {
-    "name": "Warner Bros Discovery Inc",
+    "company_name": "Warner Bros Discovery Inc",
     "ticker": "WBD",
     "scores": {
       "environmental": 97,
@@ -890,7 +890,7 @@ const comp_constants = [
     "stockPrice": 457
   },
   {
-    "name": "Microchip Technology Inc",
+    "company_name": "Microchip Technology Inc",
     "ticker": "MCHP",
     "scores": {
       "environmental": 94,
@@ -900,7 +900,7 @@ const comp_constants = [
     "stockPrice": 171
   },
   {
-    "name": "CDW Corp",
+    "company_name": "CDW Corp",
     "ticker": "CDW",
     "scores": {
       "environmental": 58,
@@ -910,7 +910,7 @@ const comp_constants = [
     "stockPrice": 161
   },
   {
-    "name": "Biogen Inc",
+    "company_name": "Biogen Inc",
     "ticker": "BIIB",
     "scores": {
       "environmental": 57,
@@ -920,7 +920,7 @@ const comp_constants = [
     "stockPrice": 210
   },
   {
-    "name": "ON Semiconductor Corp",
+    "company_name": "ON Semiconductor Corp",
     "ticker": "ON",
     "scores": {
       "environmental": 52,
@@ -930,7 +930,7 @@ const comp_constants = [
     "stockPrice": 116
   },
   {
-    "name": "MongoDB Inc",
+    "company_name": "MongoDB Inc",
     "ticker": "MDB",
     "scores": {
       "environmental": 99,

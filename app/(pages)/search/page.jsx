@@ -96,7 +96,7 @@ export default function SearchPage() {
                   }}
                   onClick={() => router.push(`/company/${encodeURIComponent(company.company_name)}`)}
                 >
-                  <TableCell>{company.name}</TableCell>
+                  <TableCell>{company.company_name}</TableCell>
                   <TableCell>{company.ticker}</TableCell>
                   <TableCell>{company.scores.environmental}</TableCell>
                   <TableCell>{company.scores.social}</TableCell>
