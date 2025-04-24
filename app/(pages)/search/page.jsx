@@ -28,7 +28,7 @@ export default function SearchPage() {
 
   const handleSearch = (value) => {
     const filtered = comp_constants.filter(company =>
-      company.name.toLowerCase().includes(value.toLowerCase())
+      company.company_name.toLowerCase().includes(value.toLowerCase())
     );
     setFilteredCompanies(filtered);
   };
@@ -44,7 +44,7 @@ export default function SearchPage() {
             mt={3}
             freeSolo
             options={comp_constants}
-            getOptionLabel={(option) => option.name}
+            getOptionLabel={(option) => option.company_name}
             onInputChange={(event, value) => setSearchValue(value)} // update search value as user types
             onKeyDown={(e) => {
               if (e.key === 'Enter') handleSearch(searchValue);
