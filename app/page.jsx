@@ -60,6 +60,7 @@ export default function Home() {
                   src={'/home_guy.png'}
                   alt='ESG data illustration'
                   width='500'
+                  height='500'
                   style={{ maxWidth: '65%', height: 'auto' }}
                 />
               </Box>
@@ -138,6 +139,8 @@ export default function Home() {
             <Image
               src={'/collab.jpg'}
               alt='how to use graphic'
+              width='800'
+              height='700'
               style={{ maxWidth: '100%', height: 'auto' }}
             />
           </Grid>
