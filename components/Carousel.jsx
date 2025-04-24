@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    image: '/public/static/test1.png',
+    image: '/public/test1.png',
     quote: `This is perfect!`,
   },
   {
-    image: '/public/static/test2.png',
+    image: '/public/test2.png',
     quote: "We're already using your API!",
   },
 ];
