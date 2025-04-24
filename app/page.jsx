@@ -57,7 +57,7 @@ export default function Home() {
             <Grid xs={12} md={6}>
               <Box display='flex' justifyContent='center'>
                 <Image
-                  src={'/public/home_guy.png'}
+                  src={'/home_guy.png'}
                   alt='ESG data illustration'
                   width='500'
                   style={{ maxWidth: '65%', height: 'auto' }}
@@ -136,7 +136,7 @@ export default function Home() {
         <Grid container spacing={4} alignItems='center'>
           <Grid xs={12} md={6}>
             <Image
-              src={'/public/collab.jpg'}
+              src={'/collab.jpg'}
               alt='how to use graphic'
               style={{ maxWidth: '100%', height: 'auto' }}
             />
