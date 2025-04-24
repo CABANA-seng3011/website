@@ -6,39 +6,9 @@ import { GreenBox } from '@/components/GreenBox';
 import { Autocomplete, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography, InputAdornment, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
+import comp_constants from '@/app/(pages)/search/company_data.jsx';
+import { useRouter } from 'next/navigation';
 
-const comp_constants = [
-  {
-    name: 'Apple Inc.',
-    ticker: 'AAPL',
-    scores: {
-      environmental: 82,
-      social: 76,
-      governance: 88,
-    },
-    stockPrice: 150,
-  },
-  {
-    name: 'Microsoft Corporation',
-    ticker: 'MSFT',
-    scores: {
-      environmental: 90,
-      social: 80,
-      governance: 85,
-    },
-    stockPrice: 250,
-  },
-  {
-    name: 'Tesla, Inc.',
-    ticker: 'TSLA',
-    scores: {
-      environmental: 85,
-      social: 70,
-      governance: 78,
-    },
-    stockPrice: 220,
-  }
-];
 
 function Description() {
   return (
@@ -62,6 +32,8 @@ export default function SearchPage() {
     );
     setFilteredCompanies(filtered);
   };
+
+  const router = useRouter();
 
   return (
     <Box py={5}>
@@ -113,8 +85,18 @@ export default function SearchPage() {
             </TableHead>
             <TableBody>
               {filteredCompanies.map((company, index) => (
-                <TableRow key={index}>
-                  <TableCell>{company.name}</TableCell>
+                <TableRow 
+                  key={index}
+                  hover
+                  sx={{
+                    cursor: 'pointer',
+                    '&:hover': {
+                      backgroundColor: '#f0f0f0',
+                    },
+                  }}
+                  onClick={() => router.push(`/company/${encodeURIComponent(company.company_name)}`)}
+                >
+                  <TableCell>{company.company_name}</TableCell>
                   <TableCell>{company.ticker}</TableCell>
                   <TableCell>{company.scores.environmental}</TableCell>
                   <TableCell>{company.scores.social}</TableCell>
